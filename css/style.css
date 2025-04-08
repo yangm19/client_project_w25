@@ -135,8 +135,8 @@ nav ul li a:hover {
 /* Button to open form */
 #open-form {
   padding: 10px 20px;
+  color: black;
   background-color: #00B2A9; /* teal from UM secondary palette */
-  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -144,6 +144,7 @@ nav ul li a:hover {
 
 #open-form:hover {
   background-color: #2F65A7; /* from UM secondary palette */
+  color: white;
 }
 
 /* mobile view */

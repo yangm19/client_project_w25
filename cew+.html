@@ -12,11 +12,11 @@
 <body>
     <header>
         <a class="skip" href="#main">Skip to Main content</a>
-        <img src="images/cew_logo.png" alt="CEW+ logo">
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href = "cew+.html">CEW+</a></li>
+                <li class="active"><a href = "cew+.html">CEW+</a></li>
                 <li><a href = "foodpantry.html">Maize and Blue Cupboard</a></li>
                 <li><a href ="caps.html">CAPS</a></li>
             </ul>
@@ -25,7 +25,7 @@
 
     </header>
     <main id="main">
-        <section>
+        <section id="about-cew">
             <h2>About CEW+</h2>
             <p>"At CEW+, we navigate circumstantial barriers by providing academic, financial, and professional support
                 to help you reach your personal potential. Established to support women through higher education, we
@@ -39,7 +39,7 @@
                 </figure>
         </section>
 
-        <section>
+        <section id="resources-cew">
             <h2>Resources</h2>
             <p>
                 CEW+ provides immediate and ongoing services and the financial support needed to ensure educational success and degree completion. Women+ and underserved students are CEW+’s primary constituency, but all students are welcome. CEW+ also serves those who encounter education and career obstacles based on their non-linear paths to, and experiences within, the University community. These include:</p>
@@ -51,7 +51,7 @@
             </ol>
         </section>
 
-        <section>
+        <section id="events-cew">
             <h3>Events & Workshops</h3>
             <p>CEW+ hosts a variety of events and workshops open to all university students. These include but are not limited to career, personal, and professional development, STAMP eligible events, financial empowerment, and more!</p>
             <h4>Opportunities and resources:</h4>
@@ -83,7 +83,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="funding-cew">
             <h3>Funding</h3>
             <p>CEW+ works to break down barriers and increase access through funding. For U-M students, staff, faculty, and surrounding community, there are opportunities for scholarships, emergency grants, sponsorships, fellowships, and more for a range of situations and life circumstances.</p>
             <h4>Types of funding:</h4>
@@ -103,7 +103,7 @@
             </ol>
         </section>
 
-        <section>
+        <section id="counseling-cew">
             <h3>Counseling</h3>
             <p>
                 CEW+ offers career, education, and emergency funding counseling appointments in person, over the phone, or via Zoom. In-person counseling appointments are available on Wednesdays, Thursdays, and Fridays. Zoom and phone appointments are available Monday through Friday.</p>
@@ -115,7 +115,7 @@
                 </ul>
         </section>
 
-        <section>
+        <section id="advocacy-cew">
             <h3>Advocacy Initiatives</h3>
             <p>Through a variety of initiatives, groups, and lecture series, CEW+ lifts up and make space for diverse voices.</p>
             <h4>Examples:</h4>
@@ -147,11 +147,32 @@
             </ul>
         </section>
     </main>
+    <button id="open-form">Have a Question? Contact Us!</button>
+
+    <!-- Contact form -->
+    <div id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="question-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <button id="close-form">Close</button>
+    </div>
+    <script src="js/form.js"></script>
 
 </body>
 <footer>
-    <img src="images/CEW++Logo_Informal_maize+and+blue+print.png" alt="CEW+ logo">
+    <p>© Copyrights <span id="year"></span> by Molly Yang. All rights reserved.</p>
     <p>Center for the Education of Women + | <a href="https://www.cew.umich.edu/">CEW+ </a></p>
 </footer>
 
+<script>
+    const year = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </html>

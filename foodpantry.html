@@ -11,12 +11,12 @@
 
     <header>
         <a class="skip" href="#main">Skip to Main content</a>
-            <img src="images/maize.png" alt="Maize and Blue food pantry with shelves of canned foods">
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "cew+.html">CEW+</a></li>
-                <li><a href = "foodpantry.html">Maize and Blue Cupboard</a></li>
+                <li class="active"><a href = "foodpantry.html">Maize and Blue Cupboard</a></li>
                 <li><a href ="caps.html">CAPS</a></li>
             </ul>
         </nav>
@@ -24,14 +24,14 @@
 
     </header>
     <main id="main">
-        <section id="about">
+        <section id="about-food">
             <h2>About Maize & Blue</h2>
             <p>The food pantry serves to ensure members of the University of Michigan community—whether on a tight budget or physically restrained from getting to a grocery store—receive equitable access to healthy, nutritious, and nourishing food and the ability to prepare it for themselves or others.
             </p>
 
         </section>
 
-        <section id="resources">
+        <section id="resources-food">
             <h2>Resources</h2>
             <ul>
                 <li>Food
@@ -90,11 +90,33 @@
             </figure>
         </section>
     </main>
+    <button id="open-form">Have a Question? Contact Us!</button>
+
+    <!-- Contact form -->
+    <div id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="question-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <button id="close-form">Close</button>
+    </div>
+    <script src="js/form.js"></script>
 
 </body>
 <footer>
-    <img src="images/grocerybag.png" alt="Bag of groceries">
+    <p>© Copyrights <span id="year"></span> by Molly Yang. All rights reserved.</p>
     <p>Maize & Blue Cupboard | <a href="https://mbc.studentlife.umich.edu/">U-M Food Pantry </a></p>
 </footer>
+
+<script>
+    const year = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </html>

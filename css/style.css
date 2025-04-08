@@ -6,10 +6,10 @@ body {
     margin: 0;
     padding: 0;
   }
-  
-  /* Header */
-  header {
-    background-color: #005f73;
+
+/* Header */
+header {
+    background-color: #00274C; /* blue from UM primary palette  */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -23,7 +23,7 @@ body {
     left: 10px;
     height: 35px;
     background-color: white;
-    color: #005f73;
+    color: #00274C;
     padding: 10px;
     font-size: 14px;
     text-decoration: none;
@@ -49,6 +49,13 @@ nav {
     padding: 10px 0;
   }
 
+/* navigation highlights current selection */
+nav ul li.active a {
+    color: black;
+    background:#FFCB05;
+    padding: 10px;
+ }
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -68,18 +75,88 @@ nav ul li a {
   }
 
 nav ul li a:hover {
-    color: lightcoral;
+    color: #FFCB05;
   }
 
-/* Main */
-main {
+/* contact form */
+#contact-form {
+  display: none; /* Hidden initially */
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  border-radius: 8px;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2F65A7; /* blue from UM secondary palette */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #FFCB05; /* yellow on hover */
+  color: black;
+}
+
+/* Style for the 'Close' button */
+#close-form {
+  width: 100%;
+  padding: 10px;
+  background-color: #00274C; /* teal from UM secondary palette */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+#close-form:hover {
+  background-color: #FFCB05; /* Yellow (maize) on hover */
+  color: black;
+}
+
+/* Button to open form */
+#open-form {
+  padding: 10px 20px;
+  background-color: #00B2A9; /* teal from UM secondary palette */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#open-form:hover {
+  background-color: #2F65A7; /* from UM secondary palette */
+}
+
+/* mobile view */
+@media screen {
+  main {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px; /* Space between sections */
-    padding: 20px;
-    background-color: black;
-  }
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    grid-auto-flow: dense;
 
+}
 /* Sections */
 section {
     padding: 40px 20px;
@@ -116,7 +193,7 @@ article {
 
 article h3 {
     font-size: 22px;
-    color: #005f73;
+    color: #2F65A7;
     margin-top: 20px;
   }
 
@@ -145,8 +222,8 @@ figcaption {
   }
   
   footer a {
-    color: #4466ff;
-    text-decoration: none;
+    color: #00B2A9;
+    text-decoration: underline;
   }
   
   footer a:hover {
@@ -156,7 +233,7 @@ figcaption {
   /* index */
   /* First section (Welcome) */
   #welcome {
-    background-color: #f1f8f4;
+    background-color: #FFCB05;
     padding: 40px;
     border-radius: 8px;
     grid-column: span 1;
@@ -174,7 +251,7 @@ figcaption {
   
   /* Physical Health Section - Nested Grid */
   #physical-health {
-    background-color: #e9f5f1;
+    background-color: #FFCB05;
     padding: 40px;
     border-radius: 8px;
     display: grid;
@@ -214,7 +291,7 @@ figcaption {
   
   /* Mental Health Section - Nested Grid */
   #mental-health {
-    background-color: #e9f5f1;
+    background-color: #FFCB05;
     padding: 40px;
     border-radius: 8px;
     display: grid;
@@ -249,7 +326,7 @@ figcaption {
   
   /* Life Outside the Classroom Section - Nested Grid */
   #life-outside-classroom {
-    background-color: #e9f5f1;
+    background-color: #FFCB05;
     padding: 40px 20px;
     border-radius: 8px;
     grid-column: span 1;
@@ -272,7 +349,7 @@ figcaption {
   
   #life-outside-classroom ul li strong {
     font-size: 18px;
-    color: #005f73;
+    color: #2F65A7;
     margin-bottom: 10px;
   }
   
@@ -282,26 +359,34 @@ figcaption {
   }
   
 /* food pantry */
-#about {
-    background-color: #f1f8f4;
+#about-food {
+    background-color: #FFCB05;
     padding: 40px;
     border-radius: 8px;
     grid-column: span 1; 
   }
   
-  #about h2 {
+  #about-food h2 {
     font-size: 24px;
     margin-bottom: 15px;
   }
   
-  #about p {
+  #about-food p {
     font-size: 16px;
     line-height: 1.6;
   }
+/* how it works */
+#how {
+  grid-column: span 1;
+  background-color: #FFCB05;
+  figcaption {
+    color: black;
+  }
+}
 
 /* resources - Nested Grid */
-#resources {
-    background-color: #e9f5f1;
+#resources-food {
+    background-color: #FFCB05;
     padding: 40px;
     border-radius: 8px;
     display: grid;
@@ -309,11 +394,11 @@ figcaption {
     gap: 20px;
   }
   
-  #resources h2 {
+  #resources-food h2 {
     font-size: 24px;
   }
 
-  #resources li {
+  #resources-food li {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
@@ -323,121 +408,68 @@ figcaption {
     display: grid;
   }
 
-/* IGNORE this is scrapped */
-/* Reset some default styles
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and general page layout */
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 1fr;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-} */
-
-/* Header styling */
-/* header {
-    background-color: #005c8c;
-    color: white;
-    padding: 5%;
-    text-align: center;
-    grid-area: header;
-}
-
-header img {
-    width: 20%;
-    margin-bottom: 2%;
-}
-
-header h1 {
-    font-size: 5vw;
-    margin-top: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-} */
-
-
-/* Navigation styling */
-/* nav ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    margin-top: 2%;
-}
-
-nav ul li {
-    margin: 2% 0;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 4vw;
-} */
-
-/* Main content styling */
-/* main {
-    grid-area: main;
-    padding: 5% 5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 5%;
-    overflow: auto;
-}
-
-main section {
-    background-color: white;
-    padding: 5%;
-    margin-bottom: 5%;
-    border-radius: 2%;
-}
-
-main section h2 {
-    font-size: 4vw;
-    margin-bottom: 2%;
-}
-
-main section p {
-    margin-bottom: 3%;
-}
-
-article {
-    margin-bottom: 5%;
-}
-
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 2%;
-}
-
-article h3 {
-    margin-top: 3%;
-    font-size: 3.5vw;
-}
-
-footer {
-    grid-area: footer;
-    text-align: center;
-    background-color: white;
+/* cew */
+#about-cew {
+  background-color: #FFCB05;
+  figcaption {
     color: black;
-    padding: 2%;
-    margin-top: 5%;
+  }
 }
 
-footer a {
-    color: #00aaff;
+#resources-cew {
+  background-color: #FFCB05;
 }
- */
+
+#events-cew {
+  background-color: #FFCB05;
+}
+
+#counseling-cew {
+  background-color: #FFCB05;
+}
+
+#advocacy-cew {
+  background-color: #FFCB05;
+}
+
+#funding-cew {
+  background-color: #FFCB05;
+}
+
+/* caps */
+#about-caps {
+  background-color: #FFCB05;
+}
+
+#services-caps {
+  background-color: #FFCB05;
+}
+
+#scope-caps {
+  background-color: #FFCB05;
+}
+
+#support-caps {
+  background-color: #FFCB05;
+  figcaption {
+    color: black;
+  }
+}
+}
+
+/* breakpoint: tablet view */
+@media screen and (min-width: 850px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    grid-auto-flow: dense;
+  }
+  #how {
+    grid-column: span 2;
+    background-color: #FFCB05;
+  }
+}
+

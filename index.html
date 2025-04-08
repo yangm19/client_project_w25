@@ -99,8 +99,31 @@
         <!-- Content taken & modified from UMGPT with the prompt, "write me a webpage of intro content to help University of Michigan Master's students navigate different resources for being successful in grad school - this will include academic resources, physical health resources, mental health resources, support for life outside the classroom"
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
+    <button id="open-form">Have a Question? Contact Us!</button>
+
+    <!-- Contact form -->
+    <div id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="question-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <button id="close-form">Close</button>
+    </div>
+    <script src="js/form.js"></script>
+
 </body>
 <footer>
+    <p>© Copyrights <span id="year"></span> by Molly Yang. All rights reserved.</p>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
         </footer>
+        <script>
+            const year = new Date().getFullYear();
+            document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
 </html>

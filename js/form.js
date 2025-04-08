@@ -1,3 +1,4 @@
+// inspired by stackoverflow
 // Open the form when the "Have a Question? Contact Us!" button is clicked
 document.getElementById("open-form").addEventListener("click", function() {
     // Display the contact form
